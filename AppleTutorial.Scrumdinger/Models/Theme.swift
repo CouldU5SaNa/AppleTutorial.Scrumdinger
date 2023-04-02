@@ -23,14 +23,20 @@ enum Theme: String {
     case tan
     case teal
     case yellow
-
+    
     var accentColor: Color {
         switch self {
-            case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
-            case .indigo, .magenta, .navy, .oxblood, .purple: return .white
+        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
+        case .indigo, .magenta, .navy, .oxblood, .purple: return .white
         }
     }
     var mainColor: Color {
-        Color(rawValue)
+        switch self {
+        case .yellow:
+            return Color.yellow
+        default:
+            return Color(rawValue)
+        }
     }
 }
+
