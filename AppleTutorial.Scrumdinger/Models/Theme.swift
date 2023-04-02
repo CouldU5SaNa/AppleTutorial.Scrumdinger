@@ -32,6 +32,8 @@ enum Theme: String {
     }
     var mainColor: Color {
         switch self {
+        case .orange:
+            return Color.orange
         case .yellow:
             return Color.yellow
         default:
