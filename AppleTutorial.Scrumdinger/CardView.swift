@@ -11,7 +11,8 @@ struct CardView: View {
     let scrum: DailyScrum
     //DailyScrumのクラスファイル。定数宣言しているのにも関わらず、代入、初期化をしていないため、エラーが出る。
     var body: some View {
-        NavigationLink(destination: Text(scrum.title)) {
+        NavigationLink(destination: DetailView(scrum: scrum)) {
+            //CardView全体がリンクになるようにするには、Stack全部まとめてナビゲーションリンクとする必要がある。
             VStack(alignment: .leading) {
                 Text(scrum.title)
                     .font(.headline)

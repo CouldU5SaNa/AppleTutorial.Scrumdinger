@@ -5,6 +5,7 @@
 //  Created by 後藤 子龍 on 2023/04/02.
 //
 
+//このViewではカードViewを組み合わせたリストを提供する。
 import SwiftUI
 
 struct ScrumsView: View {
