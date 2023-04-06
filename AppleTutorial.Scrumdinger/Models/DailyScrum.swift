@@ -14,6 +14,7 @@ struct DailyScrum : Identifiable {
     var lengthInMinutes: Int
     var theme: Theme
     //別ファイルで定義されている。詳しくはTheme.swiftを見る必要がありそうだ。
+    //このthemeは列挙型で、caseで色の名前を定義するとともに、変数を定義している。rawvalueだとそのcaseの名前を返すようだ。
     
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
