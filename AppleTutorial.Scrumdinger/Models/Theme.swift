@@ -44,11 +44,12 @@ enum Theme: String {
         }
     }
     var name: String {
-        rawValue.lowercased()
+        rawValue.capitalized
+    }
             //.capitalizedは、文字のサイズ規定を行っているようである。
         //調べたところ、英語にはキャピタライゼーションルールというのがあって、最初の一文字を大文字にするのをこれは表しているようだ。
         //このname、どうやらテーマカラーのnameらしい。
         //このcapitalizedは、themeのnameの単語を出してるみたい。変数名：型注釈{"AA"}みたいな構造なのでは？{}これが引数なのかどうかは不明。
-    }
+        var testColor:String{return "String"}
 }
 
